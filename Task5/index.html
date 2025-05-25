@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiniBlog - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Center everything */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #004d40;
+    }
+
+    nav {
+      background-color: #00796b;
+      width: 100%;
+      padding: 15px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #80cbc4;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    header .highlight {
+      color: #d81b60;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 500px;
+      margin: 0 auto 40px;
+      animation: fadeInUp 1.8s ease forwards;
+      opacity: 0;
+    }
+
+    .animation-section {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .person {
+      width: 100px;
+      height: 150px;
+      background: #f48fb1;
+      border-radius: 50% 50% 45% 45% / 70% 70% 30% 30%;
+      position: relative;
+      animation: bounce 2.5s ease infinite;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .person1 {
+      background: #f48fb1;
+      animation-delay: 0s;
+    }
+    .person2 {
+      background: #ce93d8;
+      animation-delay: 0.3s;
+    }
+    .person3 {
+      background: #81d4fa;
+      animation-delay: 0.6s;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="login.html" class="nav-link">Login</a>
+    <a href="welcome.html" class="nav-link">Welcome</a>
+    <a href="posts.html" class="nav-link">Posts</a>
+  </nav>
+
+  <!-- Home Header -->
+  <header>
+    <h1 class="animated-title">Welcome to <span class="highlight">MiniBlog</span></h1>
+    <p>Share your stories, connect with others, and be heard.</p>
+  </header>
+
+  <!-- Animation Section -->
+  <section class="animation-section">
+    <div class="person person1"></div>
+    <div class="person person2"></div>
+    <div class="person person3"></div>
+  </section>
+
+  <!-- Optional Welcome Section -->
+  <section style="max-width:600px; margin:auto; padding: 20px;">
+    <h2 style="color:#00796b;">What is MiniBlog?</h2>
+    <p>
+      MiniBlog is a lightweight blogging platform designed for speed, simplicity, and expression.
+      Login to create, edit, and delete your blog posts. Express your thoughts and connect with others.
+    </p>
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
