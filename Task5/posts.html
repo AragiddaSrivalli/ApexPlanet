@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniBlog - Posts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="welcome.html">Welcome</a>
+    <a href="posts.html">Posts</a>
+    <button id="logoutBtn" style="float: right;">Logout</button>
+  </nav>
+
+  <div class="container">
+    <h2>Manage Blog Posts</h2>
+    <form id="postForm">
+      <input type="text" id="postTitle" placeholder="Title" required />
+      <textarea id="postContent" placeholder="Write your blog content here..." required></textarea>
+      <input type="hidden" id="postIndex" />
+      <button type="submit">Save Post</button>
+      <button type="button" id="cancelEditBtn" class="hidden">Cancel Edit</button>
+    </form>
+
+    <input type="text" id="searchInput" placeholder="Search posts..." />
+
+    <ul id="postsContainer"></ul>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
