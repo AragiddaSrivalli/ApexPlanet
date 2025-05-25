@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure MiniBlog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Secure MiniBlog Login</h1>
+    <form id="loginForm" method="POST" action="login.php">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <h2>Register</h2>
+    <form id="registerForm" method="POST" action="register.php">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <select name="role" required>
+        <option value="editor">Editor</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
 
